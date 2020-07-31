@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${product.name}"></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body class="text-center" style="background-color: #1a1a1d;">
+<header class="masthead text-center fixed-top" style="background-color: black; color: white; margin-bottom: 20px;">
+    <div class="inner">
+        <h3 class="masthead-brand">CAR SALES</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.html" style="color: white">HOME</a>
+            <a class="nav-link" href="dashboard" style="color: white">SELL YOUR CAR</a>
+            <a class="nav-link" href="filter" style="color: white">FILTER</a>
+            <a class="nav-link" href="offers" style="color: white">CARS</a>
+        </nav>
+    </div>
+</header>
+<div class="container" style="max-width: 960px;color: white;margin-top: 100px;">
+    <img th:src="${product.photoFile}" class="card-img-top">
+    <h4 class="my-0 font-weight-normal" th:text="${product.name}"></h4>
+    <div class="card-body">
+        <h1 class="card-title pricing-card-title"><span th:text="${product.price}"></span> EUR</h1>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="alert alert-dark text-center" role="alert" style="width: 200px">
+                    VEHICLE DETAILS
+                </div>
+                <table>
+                    <tr>
+                        <th>Horse power</th>
+                        <th th:text="${product.horsepower}"></th>
+                    </tr>
+                    <tr>
+                        <th>N/m</th>
+                        <th th:text="${product.newtonMeters}"></th>
+                    </tr>
+                    <tr>
+                        <th>Fuel type</th>
+                        <th th:text="${product.fuelType}"></th>
+                    </tr>
+                    <tr>
+                        <th>Fuel efficiency</th>
+                        <th th:text="${product.fuelEfficiency}"></th>
+                    </tr>
+                    <tr>
+                        <th>Transmission</th>
+                        <th th:text="${product.transmission}"></th>
+                    </tr>
+                    <tr>
+                        <th>Kilometers</th>
+                        <th th:text="${product.kilometers}"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                <div class="alert alert-dark text-center" role="alert" style="width: 200px">
+                    VEHICLE FEATURES
+                </div>
+                <table>
+                    <tr>
+                        <th>Wheels</th>
+                        <th th:text="${product.wheels}"></th>
+                    </tr>
+                    <tr>
+                        <th>Seats</th>
+                        <th th:text="${product.seats}"></th>
+                    </tr>
+                    <tr>
+                        <th>Audio</th>
+                        <th th:text="${product.audio}"></th>
+                    </tr>
+                    <tr>
+                        <th>Traction</th>
+                        <th th:text="${product.traction}"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin: auto;">
+        <div class="card-header">Owner <span th:text="${product.ownerName}"></span></div>
+        <div class="card-body">
+            <h5 class="card-title">Phone number <span th:text="${product.ownerPhone}"></span></h5>
+        </div>
+    </div >
+    <div>
+        <input type="button" value="I am interested" id="countButton" class="btn btn-outline-light"
+                style="width: 100%;"/>
+    </div>
+    <div class="alert alert-dark text-center" style="margin-top: 20px;">
+        There are <span id="displayCount">0</span> interested users
+    </div>
+    <script type="text/javascript">
+          var count = 0;
+          var button = document.getElementById("countButton");
+          var display = document.getElementById("displayCount");
+
+          button.onclick = function(){
+            count++;
+            display.innerHTML = count;
+          }
+    </script>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+                <small class="d-block mb-3 text-muted">© 2017-2020</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Contact</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="contact">Message Us</a></li>
+                    <li><a class="text-muted" href="https://www.facebook.com/targulvitan/">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="about">Team</a></li>
+                    <li><a class="text-muted" href="https://www.google.com/maps/place/Targ+Auto+Vitan/
+                        @44.4028362,26.1407105,17z/data=!3m1!4b1!4m5!3m4!1s0x40b1ffe53984baf5:0x23a84ded876ceb4f!8m2!
+                        3d44.4028362!4d26.1428992">Locations</a></li>
+                    <li><a class="text-muted" href="policy">Privacy</a></li>
+                    <li><a class="text-muted" href="terms">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

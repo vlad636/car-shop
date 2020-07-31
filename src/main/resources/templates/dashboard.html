@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body class="text-center" style="background-color: #1a1a1d;">
+    <header class="masthead text-center fixed-top" style="background-color: black; color: white; margin-bottom: 20px;">
+        <div class="inner">
+            <h3 class="masthead-brand">CAR SALES</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="index.html" style="color: white">HOME</a>
+                <a class="nav-link" href="dashboard" style="color: white">SELL YOUR CAR</a>
+                <a class="nav-link" href="filter" style="color: white">FILTER</a>
+                <a class="nav-link" href="offers" style="color: white">CARS</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container" style="max-width: 960px; color: white; margin-top: 100px;">
+        <div class="alert alert-dark" role="alert" style="width: 960px; margin: auto; margin-bottom: 20px;">
+            Here you can sell your car on our site!
+        </div>
+        <form action="postCar" style="width: 600px; margin: auto; ">
+            <div class="row">
+                <div class="col">
+                    <label>Model</label>
+                    <input name="name" class="form-control" placeholder="ex : BMW M5">
+                </div>
+                <div class="col">
+                    <label>Price EUR</label>
+                    <input name="price" class="form-control" placeholder="ex : 59000">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Photo Name</label>
+                    <input name="photo_file" class="form-control" placeholder="ex : BMW_M5.jpg">
+                </div>
+                <div class="col">
+                    <label>Car Model</label>
+                    <input name="category_name" class="form-control" placeholder="ex : BMW / Audi">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Fuel Type</label>
+                    <input name="fuel_type" class="form-control" placeholder="ex : Petrol">
+                </div>
+                <div class="col">
+                    <label>Fuel Efficiency</label>
+                    <input name="fuel_efficiency" class="form-control" placeholder="ex : 11 L / 100 km">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Transmission</label>
+                    <input name="transmission" class="form-control" placeholder="ex : Automatic">
+                </div>
+                <div class="col">
+                    <label>Kilometers</label>
+                    <input name="kilometers" class="form-control" placeholder="ex : 100000">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Horse Power</label>
+                    <input name="hp" class="form-control" placeholder="ex : 500">
+                </div>
+                <div class="col">
+                    <label>Newton/meters</label>
+                    <input name="n/m" class="form-control" placeholder="ex : 610">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Owner Name</label>
+                    <input name="owner" class="form-control" placeholder="ex : John Cena">
+                </div>
+                <div class="col">
+                    <label>Owner Phone Number</label>
+                    <input name="ownerPhone" class="form-control" placeholder="ex : 12385125xxx">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Wheels</label>
+                    <input name="wheels" class="form-control" placeholder="ex : 20''">
+                </div>
+                <div class="col">
+                    <label>Seats</label>
+                    <input name="seats" class="form-control" placeholder="ex : Electric seats - front passengers">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Audio</label>
+                    <input name="audio" class="form-control" placeholder="ex : BOSE Speakers">
+                </div>
+                <div class="col">
+                    <label>Traction</label>
+                    <input name="traction" class="form-control" placeholder="ex : AWD">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-light" style="width: 100%; margin-top: 40px;">Submit</button>
+        </form>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+                    <small class="d-block mb-3 text-muted">© 2017-2020</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="contact">Message Us</a></li>
+                        <li><a class="text-muted" href="https://www.facebook.com/targulvitan/">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="about">Team</a></li>
+                        <li><a class="text-muted" href="https://www.google.com/maps/place/Targ+Auto+Vitan/
+                        @44.4028362,26.1407105,17z/data=!3m1!4b1!4m5!3m4!1s0x40b1ffe53984baf5:0x23a84ded876ceb4f!8m2!
+                        3d44.4028362!4d26.1428992">Locations</a></li>
+                        <li><a class="text-muted" href="policy">Privacy</a></li>
+                        <li><a class="text-muted" href="terms">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
